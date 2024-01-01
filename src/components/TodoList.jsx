@@ -1,5 +1,5 @@
-import { useSelector } from "react-redux";
-import TodoItem from "./TodoItem";
+import { useSelector } from 'react-redux';
+import TodoItem from './TodoItem';
 
 const TodoList = () => {
   const filteredTodos = useSelector((state) => {
@@ -8,7 +8,8 @@ const TodoList = () => {
     const searchTerm = state.searchTerm.toLowerCase(); // Convert search term to lowercase for case-insensitive search
 
     return todos.filter((todo) => {
-      const matchesFilter = (filter === 'COMPLETED' && todo.completed) ||
+      const matchesFilter =
+        (filter === 'COMPLETED' && todo.completed) ||
         (filter === 'INCOMPLETE' && !todo.completed) ||
         filter === 'ALL';
 
@@ -22,7 +23,7 @@ const TodoList = () => {
 
   return (
     <ul>
-      <li className="my-2 text-sm italic">All Your Notes Here...</li>
+      <li className='my-2 text-sm italic'>All Your Notes Here...</li>
       {filteredTodos.map((todo, index) => (
         <TodoItem key={index} todo={todo} index={index} />
       ))}
