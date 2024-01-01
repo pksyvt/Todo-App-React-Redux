@@ -7,12 +7,18 @@ import { BsSearch, BsPlus } from 'react-icons/bs';
 import { addTodo, updateSearchTerm } from '../redux/actions';
 
 const Todo = () => {
+  /////////////////
+  // creating states
+  /////////////////
   const todos = useSelector((state) => state.todos);
   const filter = useSelector((state) => state.filter);
   const dispatch = useDispatch();
   const [newTodoText, setNewTodoText] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
 
+  /////////////////
+  //handling events
+  /////////////////
   const handleAddTodo = (text) => {
     dispatch(addTodo(text));
   };
