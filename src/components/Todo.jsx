@@ -44,7 +44,7 @@ const Todo = () => {
           onChange={(e) => setNewTodoText(e.target.value)}
         />
         <button
-          className='ml-4 p-2 bg-blue-500 text-white rounded hover:bg-red-600 focus:outline-none'
+          className='ml-4 p-2 bg-blue-400 text-white rounded hover:bg-red-600 focus:outline-none'
           onClick={handleAddTodoClick}
         >
           <BsPlus size={20} />
