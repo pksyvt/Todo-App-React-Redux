@@ -55,7 +55,7 @@ const Todo = () => {
         <FilterButtons />
         <div className='flex items-center mb-4'>
           <input
-            className='flex-grow p-2  border-gray-300 focus:outline-none focus:border-blue-500'
+            className='flex-grow p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500'
             type='text'
             placeholder='Search Todos'
             value={searchTerm}
